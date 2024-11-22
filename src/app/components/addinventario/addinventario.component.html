@@ -1,0 +1,33 @@
+<br>
+ <div class="card">
+   
+    <div class="card-header">
+      <button mat-raised-button (click)="goBack()"><mat-icon>arrow_back_ios</mat-icon></button>
+      <h1 style="text-align: center;">Agregar Libro</h1>
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioDeLibro" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre:</label>
+              <input required type="text"
+                class="form-control" formControlName="nombre" name="" id="" aria-describedby="helpId" placeholder="Escribe el nombre">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Autor:</label>
+              <input required type="text"
+                class="form-control" formControlName="autor" name="" id="" aria-describedby="helpId" placeholder="Escribe el autor">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Tipo:</label>
+                <input required type="text"
+                  class="form-control" formControlName="tipo" name="" id="" aria-describedby="helpId" placeholder="Escribe el tipo">
+              </div>
+
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" mat-raised-button color="primary">Agregar</button>
+                <button type="button" routerLink="/inventario"  mat-raised-button color="warn">Cancelar</button>   
+            </div> 
+        </form>
+    </div>
+    
+</div>

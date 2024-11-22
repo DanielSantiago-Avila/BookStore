@@ -1,0 +1,26 @@
+<br>
+<div class="card">
+    <div class="card-header">
+        <h1 style="text-align: center;">Login</h1>
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioDeLogin" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+              <label for="" class="form-label">Usario:</label>
+              <input required type="text"
+                class="form-control" formControlName="usuario"  aria-describedby="helpId" placeholder="Escribe tu usuario">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Contraseña:</label>
+              <input type="password"
+                class="form-control" formControlName="contrasena"  aria-describedby="helpId" placeholder="Escribe tu contraseña">
+            </div>
+            <!-- Hover added -->
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-warning">Iniciar Sesion</button>
+                <a type="button" class="btn btn-primary">Registrarse</a>
+            </div> 
+        </form>
+    </div>
+    
+</div>

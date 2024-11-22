@@ -1,0 +1,13 @@
+mat-sidenav-container{
+    height: calc(205vh - 105vh);
+}
+mat-sidenav{
+    width: 150px;
+    background-color: cornflowerblue;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.background-primary { background-color: #8798ED;
+
+}

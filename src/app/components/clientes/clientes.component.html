@@ -1,0 +1,47 @@
+<br>
+<div class="card">
+    <div class="card-header">
+        <h1 style="text-align: center;">Clientes </h1>
+        
+    </div>
+    <div class="card-body">
+        
+        <div >
+            <table mat-table class="mat-elevation-z8">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">DPI</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Correo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cliente of Cliente; let iControl=index" >
+                        <td>{{cliente.id}}</td>
+                        <td>{{cliente.nombre}}</td>
+                        <td>{{cliente.apellido}}</td>
+                        <td>{{cliente.dpi}}</td>
+                        <td>{{cliente.telefono}}</td>
+                        <td>{{cliente.correo}}</td>
+                        <td>
+                            <a class="btn btn-info" routerLink="/editar-cliente/{{cliente.id}}">Editar</a> |
+                            <a class="btn btn-danger" (click)="borrarRegistro(cliente.id,iControl)" role="button">Borrar</a>  
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <br>
+    
+</div>
+<br>
+<a class="btn btn-success" routerLink="/addcliente/" style="align-items: center;">Agregar nuevo Empleado</a> 
+
+
+
+

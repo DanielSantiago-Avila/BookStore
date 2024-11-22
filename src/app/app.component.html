@@ -1,0 +1,32 @@
+<mat-sidenav-container>
+    <mat-sidenav class="background-primary" [(opened)]="opened" mode="push">
+        <mat-list color="primary">
+            <mat-list-item>
+
+                <a mat-button color="primary" routerLink="inventario"><mat-icon>assignment_turned_in</mat-icon>Inventario</a>
+
+            </mat-list-item>
+            <mat-list-item>
+                <a mat-button color="primary" routerLink="cliente"><mat-icon>person</mat-icon>Clientes</a>
+            </mat-list-item>
+        </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+        <mat-toolbar color="primary">
+            <button (click)="opened=!opened" mat-icon-button class="example-icon"
+                aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>BookStore</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>share</mat-icon>
+            </button>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

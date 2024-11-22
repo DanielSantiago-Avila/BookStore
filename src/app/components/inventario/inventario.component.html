@@ -1,0 +1,45 @@
+<br>
+<div class="card">
+    <div class="card-header">
+        <h1 style="text-align: center;"> Inventario - Libros </h1>
+        
+    </div>
+    <div class="card-body">
+        
+        <div >
+            <table mat-table class="mat-elevation-z8">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Disponibilidad</th>
+                        <th scope="col">Persona Asignada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let libro of Libro; let iControl=index" >
+                        <td>{{libro.nombre_libro}}</td>
+                        <td>{{libro.autor}}</td>
+                        <td>{{libro.tipo}}</td>
+                        <td>{{libro.disponibilidad}}</td>
+                        <td>{{libro.nombre}}</td>
+                        <td>
+                            <a mat-raised-button color="warn" routerLink="/rentar-libro/{{libro.id}}"><mat-icon>person_add</mat-icon>Rentar</a> |
+                            
+                            <button mat-raised-button color="primary" routerLink="/editar-libro/{{libro.id}}"> <mat-icon>edit</mat-icon>Editar</button> |
+                            <button (click)="borrarRegistro(libro.id,iControl)" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+                                <mat-icon>delete</mat-icon>
+                              </button>
+                             
+                        </td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
+<br>
+<a class="btn btn-success" routerLink="/addinventario/" style="align-items: center;">Agregar nuevo Libro</a> 

@@ -1,0 +1,42 @@
+<br>
+<div class="card">
+    <div class="card-header">
+      <button mat-raised-button (click)="goBack()"><mat-icon>arrow_back_ios</mat-icon></button>
+       <h1 style="text-align: center;">Editar Cliente</h1>
+    </div>
+    <div class="card-body">
+        <form ngNativeValidate [formGroup]="formularioDeClientes" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre:</label>
+              <input required type="text"
+                class="form-control" formControlName="nombre" name="" id="" aria-describedby="helpId" placeholder="Escribe tu nombre">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido</label>
+              <input required type="text"
+                class="form-control" formControlName="apellido" name="" id="" aria-describedby="helpId" placeholder="Escribe tu Apellido">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">DPI:</label>
+                <input required type="number"
+                  class="form-control" formControlName="dpi" name="" id="" aria-describedby="helpId" placeholder="Escribe tu DPI">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Telefono</label>
+                <input required type="number"
+                  class="form-control" formControlName="telefono" name="" id="" aria-describedby="helpId" placeholder="Escribe tu Telefono">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Correo</label>
+                <input required type="email"
+                  class="form-control" formControlName="correo" name="" id="" aria-describedby="helpId" placeholder="Escribe tu Correo">
+              </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-warning">Editar</button>
+                <button type="button" routerLink="/cliente/" class="btn btn-primary">Cancelar</button>
+            </div> 
+        </form>
+    </div>
+    
+</div>
+
